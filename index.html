@@ -396,43 +396,18 @@
               <p class="arch__sub">Multi-agent pipeline powering the planner</p>
             </div>
 
-            <!-- Pipeline flow -->
-            <div class="arch__pipeline-wrap">
-              <div class="arch__pipeline" role="img" aria-label="TripSathi agent pipeline: User Input to Finalized Plan through six agents">
-                <div class="arch__node arch__node--io">
-                  <span class="arch__node-label">User Input</span>
-                </div>
-                <span class="arch__arrow" aria-hidden="true">→</span>
-                <div class="arch__node">
-                  <span class="arch__node-label">Persona Agent</span>
-                  <span class="arch__node-sub">Traveler type · constraints</span>
-                </div>
-                <span class="arch__arrow" aria-hidden="true">→</span>
-                <div class="arch__node">
-                  <span class="arch__node-label">Research Agent</span>
-                  <span class="arch__node-sub">RAG · Web · Weather</span>
-                </div>
-                <span class="arch__arrow" aria-hidden="true">→</span>
-                <div class="arch__node">
-                  <span class="arch__node-label">Planning Agent</span>
-                  <span class="arch__node-sub">Candidates + day-by-day</span>
-                </div>
-                <span class="arch__arrow" aria-hidden="true">→</span>
-                <div class="arch__node arch__node--critic">
-                  <span class="arch__node-label">Critic Agent</span>
-                  <span class="arch__node-sub">Self-review</span>
-                  <span class="arch__node-retry">↻ retry ≤ 2×</span>
-                </div>
-                <span class="arch__arrow" aria-hidden="true">→</span>
-                <div class="arch__node">
-                  <span class="arch__node-label">Human-in-Loop</span>
-                  <span class="arch__node-sub">User refinement · pause/resume</span>
-                </div>
-                <span class="arch__arrow" aria-hidden="true">→</span>
-                <div class="arch__node arch__node--io">
-                  <span class="arch__node-label">Finalized Plan</span>
-                </div>
-              </div>
+            <!-- Pipeline — Mermaid flowchart -->
+            <div class="arch__diagram">
+              <pre class="mermaid">
+flowchart LR
+    In([User Input]) --> PA["Persona Agent\nTraveler type + constraints"]
+    PA --> RA["Research Agent\nRAG · Web · Weather"]
+    RA --> PL["Planning Agent\nCandidates + reranking\n+ itinerary assembly"]
+    PL --> CR{"Critic Agent\nSelf-review"}
+    CR -->|"retry ≤ 2×"| PL
+    CR -->|pass| HL["Human-in-Loop\nUser refinement\npause / resume"]
+    HL --> Out([Finalized Plan])
+              </pre>
             </div>
 
             <!-- Tech stack grid -->
@@ -497,5 +472,18 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        fontFamily: 'Inter, system-ui, sans-serif',
+        fontSize: '13px',
+        edgeLabelBackground: '#1a1a1a',
+        lineColor: 'rgba(255,255,255,0.45)',
+      }
+    });
+  </script>
 </body>
 </html>

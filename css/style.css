@@ -583,68 +583,15 @@ p { max-width: 60ch; }
   color: rgba(255,255,255,0.25);
   max-width: none;
 }
-/* Pipeline */
-.arch__pipeline-wrap {
+/* Mermaid diagram container */
+.arch__diagram {
+  padding: var(--space-4) 0 var(--space-6);
   overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.08) transparent;
-  margin-bottom: var(--space-6);
-}
-.arch__pipeline {
   display: flex;
-  align-items: stretch;
-  gap: 0;
-}
-.arch__node {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 0.2rem;
-  padding: 0.55rem 0.7rem;
-  background: #141414;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-sm);
-  text-align: center;
-  min-width: 0;
 }
-.arch__node--io {
-  flex: 0 0 auto;
-  background: transparent;
-  border-color: rgba(232,93,38,0.45);
-  border-radius: 999px;
-  padding: 0.45rem 1rem;
-}
-.arch__node--critic {
-  border-color: rgba(232,93,38,0.3);
-}
-.arch__node-label {
-  font-size: var(--fs-xs);
-  font-weight: 600;
-  color: rgba(255,255,255,0.85);
-  white-space: nowrap;
-}
-.arch__node-sub {
-  font-size: 0.65rem;
-  color: rgba(255,255,255,0.35);
-  line-height: 1.35;
-}
-.arch__node-retry {
-  font-size: 0.65rem;
-  font-weight: 500;
-  color: var(--clr-accent);
-  white-space: nowrap;
-}
-.arch__arrow {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  padding: 0 0.2rem;
-  color: rgba(255,255,255,0.18);
-  font-size: var(--fs-sm);
-  user-select: none;
-}
+.arch__diagram .mermaid { width: 100%; }
+.arch__diagram svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
 /* Stack grid */
 .arch__stack {
   display: grid;

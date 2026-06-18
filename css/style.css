@@ -560,6 +560,120 @@ p { max-width: 60ch; }
 }
 .project__links { display: flex; gap: var(--space-4); flex-wrap: wrap; }
 
+/* ── AI Architecture panel ── */
+.project__arch {
+  grid-column: 1 / -1;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: var(--space-8);
+}
+.arch__header {
+  padding: var(--space-4) 0 var(--space-6);
+}
+.arch__heading {
+  font-family: var(--ff-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 0.2rem;
+}
+.arch__sub {
+  font-size: var(--fs-xs);
+  color: rgba(255,255,255,0.25);
+  max-width: none;
+}
+/* Pipeline */
+.arch__pipeline-wrap {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.08) transparent;
+  margin-bottom: var(--space-6);
+}
+.arch__pipeline {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+.arch__node {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.55rem 0.7rem;
+  background: #141414;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  min-width: 0;
+}
+.arch__node--io {
+  flex: 0 0 auto;
+  background: transparent;
+  border-color: rgba(232,93,38,0.45);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+}
+.arch__node--critic {
+  border-color: rgba(232,93,38,0.3);
+}
+.arch__node-label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  white-space: nowrap;
+}
+.arch__node-sub {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.35;
+}
+.arch__node-retry {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--clr-accent);
+  white-space: nowrap;
+}
+.arch__arrow {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 0.2rem;
+  color: rgba(255,255,255,0.18);
+  font-size: var(--fs-sm);
+  user-select: none;
+}
+/* Stack grid */
+.arch__stack {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.arch__cell {
+  padding: var(--space-4) var(--space-4);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.arch__cell:nth-child(4n) { border-right: none; }
+.arch__cell:nth-last-child(-n+4) { border-bottom: none; }
+.arch__cell-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+}
+.arch__cell-val {
+  font-size: var(--fs-xs);
+  color: rgba(255,255,255,0.55);
+  line-height: 1.45;
+}
+
 /* Cards grid */
 .projects__grid {
   display: grid;
@@ -796,6 +910,14 @@ p { max-width: 60ch; }
     grid-template-columns: 1fr;
     padding: var(--space-8);
   }
+
+  .arch__stack {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .arch__cell:nth-child(4n) { border-right: 1px solid rgba(255,255,255,0.06); }
+  .arch__cell:nth-child(2n) { border-right: none; }
+  .arch__cell:nth-last-child(-n+4) { border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .arch__cell:nth-last-child(-n+2) { border-bottom: none; }
 
   .projects__grid { grid-template-columns: 1fr; }
 }

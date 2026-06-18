@@ -388,6 +388,90 @@
               <a href="https://github.com/anirbanpx/tripsathi" class="btn btn--ghost" target="_blank" rel="noopener">GitHub →</a>
             </div>
           </div>
+
+          <!-- AI Architecture — full-width panel inside the dark card -->
+          <div class="project__arch">
+            <div class="arch__header">
+              <h4 class="arch__heading">AI Architecture</h4>
+              <p class="arch__sub">Multi-agent pipeline powering the planner</p>
+            </div>
+
+            <!-- Pipeline flow -->
+            <div class="arch__pipeline-wrap">
+              <div class="arch__pipeline" role="img" aria-label="TripSathi agent pipeline: User Input to Finalized Plan through six agents">
+                <div class="arch__node arch__node--io">
+                  <span class="arch__node-label">User Input</span>
+                </div>
+                <span class="arch__arrow" aria-hidden="true">→</span>
+                <div class="arch__node">
+                  <span class="arch__node-label">Persona Agent</span>
+                  <span class="arch__node-sub">Traveler type · constraints</span>
+                </div>
+                <span class="arch__arrow" aria-hidden="true">→</span>
+                <div class="arch__node">
+                  <span class="arch__node-label">Research Agent</span>
+                  <span class="arch__node-sub">RAG · Web · Weather</span>
+                </div>
+                <span class="arch__arrow" aria-hidden="true">→</span>
+                <div class="arch__node">
+                  <span class="arch__node-label">Planning Agent</span>
+                  <span class="arch__node-sub">Candidates + day-by-day</span>
+                </div>
+                <span class="arch__arrow" aria-hidden="true">→</span>
+                <div class="arch__node arch__node--critic">
+                  <span class="arch__node-label">Critic Agent</span>
+                  <span class="arch__node-sub">Self-review</span>
+                  <span class="arch__node-retry">↻ retry ≤ 2×</span>
+                </div>
+                <span class="arch__arrow" aria-hidden="true">→</span>
+                <div class="arch__node">
+                  <span class="arch__node-label">Human-in-Loop</span>
+                  <span class="arch__node-sub">User refinement · pause/resume</span>
+                </div>
+                <span class="arch__arrow" aria-hidden="true">→</span>
+                <div class="arch__node arch__node--io">
+                  <span class="arch__node-label">Finalized Plan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tech stack grid -->
+            <div class="arch__stack">
+              <div class="arch__cell">
+                <span class="arch__cell-label">Orchestration</span>
+                <span class="arch__cell-val">LangGraph state machine</span>
+              </div>
+              <div class="arch__cell">
+                <span class="arch__cell-label">Knowledge / RAG</span>
+                <span class="arch__cell-val">LlamaIndex · Qdrant Cloud · 54 destinations</span>
+              </div>
+              <div class="arch__cell">
+                <span class="arch__cell-label">LLM + Failover</span>
+                <span class="arch__cell-val">Groq → Cerebras → Gemini → OpenRouter</span>
+              </div>
+              <div class="arch__cell">
+                <span class="arch__cell-label">Reranking</span>
+                <span class="arch__cell-val">Voyage rerank-2.5 · Cohere fallback</span>
+              </div>
+              <div class="arch__cell">
+                <span class="arch__cell-label">Memory</span>
+                <span class="arch__cell-val">3-layer — session · preferences · cross-device (Mem0)</span>
+              </div>
+              <div class="arch__cell">
+                <span class="arch__cell-label">Guardrails</span>
+                <span class="arch__cell-val">Regex filter · Groq safeguard-20b classifier</span>
+              </div>
+              <div class="arch__cell">
+                <span class="arch__cell-label">Evaluation</span>
+                <span class="arch__cell-val">DeepEval · GEval · RAG metrics · 10 test cases</span>
+              </div>
+              <div class="arch__cell">
+                <span class="arch__cell-label">Observability</span>
+                <span class="arch__cell-val">Arize Phoenix · OpenInference auto-instrumentation</span>
+              </div>
+            </div>
+          </div>
+
         </article>
 
       </div>

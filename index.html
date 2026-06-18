@@ -400,13 +400,16 @@
             <div class="arch__diagram">
               <pre class="mermaid">
 flowchart LR
-    In([User Input]) --> PA["Persona Agent\nTraveler type + constraints"]
+    In([User Input]) --> GR["Guardrails\nRegex · Groq safeguard-20b"]
+    GR -->|safe| PA["Persona Agent\nTraveler type + constraints"]
     PA --> RA["Research Agent\nRAG · Web · Weather"]
     RA --> PL["Planning Agent\nCandidates + reranking\n+ itinerary assembly"]
     PL --> CR{"Critic Agent\nSelf-review"}
     CR -->|"retry ≤ 2×"| PL
     CR -->|pass| HL["Human-in-Loop\nUser refinement\npause / resume"]
     HL --> Out([Finalized Plan])
+    MEM[("Memory\nMem0 · TasteProfile\nLangGraph checkpoints")] -.->|past trips| PA
+    Out -.->|persist| MEM
               </pre>
             </div>
 

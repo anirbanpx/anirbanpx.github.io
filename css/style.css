@@ -592,6 +592,93 @@ p { max-width: 60ch; }
 .project__card-link:hover { text-decoration: underline; }
 
 /* ═══════════════════════════════════════════════════════════
+   CASE STUDIES (Selected Work)
+═══════════════════════════════════════════════════════════ */
+.case-study {
+  padding: var(--space-12) 0;
+  border-bottom: 1px solid var(--clr-border);
+}
+.case-study:last-child { border-bottom: none; }
+
+.case-study__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-3) var(--space-6);
+  margin-bottom: var(--space-8);
+}
+.case-study__badge {
+  font: 600 var(--fs-xs)/1 var(--ff-body);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  border: 1px solid currentColor;
+  padding: 0.3em 0.65em;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+.case-study__title {
+  font: 400 var(--fs-xl)/1.2 var(--ff-display);
+  color: var(--clr-text);
+  letter-spacing: -0.01em;
+}
+.case-study__period {
+  font: 400 var(--fs-sm)/1 var(--ff-body);
+  color: var(--clr-muted);
+  margin-left: auto;
+}
+
+.case-study__beat {
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--clr-border);
+}
+.case-study__beat-label {
+  display: block;
+  font: 600 0.68rem/1 var(--ff-body);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+  margin-bottom: var(--space-3);
+}
+.case-study__beat-text {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--clr-text);
+  max-width: 68ch;
+}
+.case-study__beat-text strong { font-weight: 600; }
+.case-study__beat-text code {
+  font-size: 0.85em;
+  background: rgba(0,0,0,0.06);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+@media (min-width: 760px) {
+  .case-study__beat {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 0 var(--space-12);
+    align-items: start;
+  }
+  .case-study__beat-label {
+    margin-bottom: 0;
+    padding-top: 0.3em;
+  }
+  .case-study__beat-text { max-width: 60ch; }
+}
+
+.case-study__footer {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--clr-border);
+  font-style: italic;
+  font-size: var(--fs-sm);
+  color: var(--clr-muted);
+  max-width: 60ch;
+}
+
+/* ═══════════════════════════════════════════════════════════
    CITATION LINKS
 ═══════════════════════════════════════════════════════════ */
 .cite {

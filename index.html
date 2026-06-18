@@ -22,6 +22,7 @@
     <ul class="nav__links">
       <li><a href="#about" class="nav__link">About</a></li>
       <li><a href="#experience" class="nav__link">Experience</a></li>
+      <li><a href="#work" class="nav__link">Work</a></li>
       <li><a href="#projects" class="nav__link">Projects</a></li>
       <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
     </ul>
@@ -35,6 +36,7 @@
     <ul class="nav__overlay-links">
       <li><a href="#about" class="nav__overlay-link">About</a></li>
       <li><a href="#experience" class="nav__overlay-link">Experience</a></li>
+      <li><a href="#work" class="nav__overlay-link">Work</a></li>
       <li><a href="#projects" class="nav__overlay-link">Projects</a></li>
       <li><a href="#contact" class="nav__overlay-link">Contact</a></li>
     </ul>
@@ -257,11 +259,86 @@
       </div>
     </section>
 
+    <!-- ═══════════════════════════ SELECTED WORK ════════════════════════ -->
+    <section class="section work" id="work">
+      <div class="section__inner">
+        <div class="section__label reveal">
+          <span class="section__num">03</span>
+          <span class="section__rule"></span>
+          <span class="section__tag">Selected Work</span>
+        </div>
+        <h2 class="section__heading reveal">
+          How I<br /><em>decide.</em>
+        </h2>
+
+        <!-- Case Study 1: Pega Launchpad -->
+        <article class="case-study reveal">
+          <div class="case-study__header">
+            <span class="case-study__badge">Zero to One · Agentic AI</span>
+            <h3 class="case-study__title">Founding PM — Pega Launchpad</h3>
+            <span class="case-study__period">2022 — 2026</span>
+          </div>
+          <div class="case-study__beats">
+            <div class="case-study__beat">
+              <span class="case-study__beat-label">Problem</span>
+              <p class="case-study__beat-text">Pega had a 40-year enterprise platform but no SaaS offering for independent software vendors. The brief: build a brand-new AI-powered low-code B2B SaaS platform from scratch and get ISVs into production on it.</p>
+            </div>
+            <div class="case-study__beat">
+              <span class="case-study__beat-label">The Bet</span>
+              <p class="case-study__beat-text">Don't invent proprietary abstractions. For every new surface, find the industry's proven developer-tooling primitive and build its low-code equivalent. JUnit became the Unit Test framework for rule authors. AWS Lambda became Custom Functions. n8n and Zapier became the Events framework. Excel formulas and Coda became the Launchpad Expression Language. The method turned deep developer tooling into something a low-code builder could configure without writing Java.</p>
+            </div>
+            <div class="case-study__beat">
+              <span class="case-study__beat-label">The Tradeoff</span>
+              <p class="case-study__beat-text">In 2023, with the first ISVs onboarding and pressure to ship features fast, I chose production hardening instead — a 4-epic Custom Functions reliability roadmap, Error Message Infrastructure coordinated across 30+ service teams, Application Preview stability. Slower near-term velocity, but it bought ISV trust. Platform products fail when they lose the first cohort.</p>
+            </div>
+            <div class="case-study__beat">
+              <span class="case-study__beat-label">The Agentic Turn</span>
+              <p class="case-study__beat-text">Applied the same primitive-study method to AI — studied n8n, LangChain, OpenAI Agent Builder. Designed three new rule forms (GenAI Connect, GenAI Agent, GenAI Tool) GA'd May–Nov 2025. The hardest production problem: agentic workflows combining LLM calls and tool execution can breach the standard 66-second HTTP timeout. Designed <code>runningMode=async</code> — an API parameter that moves agent execution to the background, plus a ConversationID-based retrieval pattern that makes long-running agents observable and testable. An API contract, not just a feature.</p>
+            </div>
+            <div class="case-study__beat">
+              <span class="case-study__beat-label">Outcome</span>
+              <p class="case-study__beat-text"><strong>20+ ISVs in production</strong> across loyalty, fintech, healthcare, and government verticals. <strong>90% of new expressions</strong> authored by builders are now AI-generated. <strong>100% of new Launchpad apps</strong> use GenAI capabilities shipped in this arc. Presented at Pega's company-wide GenAI Showcase to 1,500+ employees, including CEO Alan Trefler.</p>
+            </div>
+          </div>
+          <p class="case-study__footer">A platform's job is to make the hard thing invisible. Whether it's JUnit or LangChain, the pattern is the same: understand the primitive at depth, then abstract it to the lowest-friction surface.</p>
+        </article>
+
+        <!-- Case Study 2: Rally Health -->
+        <article class="case-study reveal">
+          <div class="case-study__header">
+            <span class="case-study__badge">Zero to One · Platform Pivot</span>
+            <h3 class="case-study__title">PM — content.werally.com, Rally Health</h3>
+            <span class="case-study__period">2020 — 2022</span>
+          </div>
+          <div class="case-study__beats">
+            <div class="case-study__beat">
+              <span class="case-study__beat-label">Problem</span>
+              <p class="case-study__beat-text">Rally Health had a successful wellness suite but no proprietary content. Each large employer customer wanted a customised member experience — different articles, landing pages, brand voice for their employees. The status quo was bespoke, slow, and required engineering time per employer.</p>
+            </div>
+            <div class="case-study__beat">
+              <span class="case-study__beat-label">The Bet</span>
+              <p class="case-study__beat-text">Build the platform, not just the content. Ship a focused MVP first to prove demand, then pivot to a CMS platform that makes per-employer customisation self-serve — eliminating the per-employer engineering overhead entirely. Sequence mattered: prove it works, then make it scale.</p>
+            </div>
+            <div class="case-study__beat">
+              <span class="case-study__beat-label">The Tradeoff</span>
+              <p class="case-study__beat-text">The CMS platform pivot in year one was a hard sell. It meant slowing visible feature delivery to build tooling employers wouldn't see directly. The argument: without it, every new employer engagement permanently required engineering time. The bet traded near-term feature velocity for invisible, compounding leverage.</p>
+            </div>
+            <div class="case-study__beat">
+              <span class="case-study__beat-label">Outcome</span>
+              <p class="case-study__beat-text"><strong>100K+ monthly active members</strong> in year one, <strong>70% CSAT.</strong> The CMS platform removed 1.5 FTE of ongoing engineering effort, cut speed-to-market from 30 days to 3 days, and unlocked <strong>$3.5M in projected two-year savings.</strong> A personalisation layer on top added a 5% lift in 28-day web retention.</p>
+            </div>
+          </div>
+          <p class="case-study__footer">The platform bet is always harder to justify until it pays off. The instinct — turn bespoke work into a configurable surface — is the same pattern I've run at Pega ever since.</p>
+        </article>
+
+      </div>
+    </section>
+
     <!-- ════════════════════════════ PROJECTS ════════════════════════════ -->
     <section class="section projects" id="projects">
       <div class="section__inner">
         <div class="section__label reveal">
-          <span class="section__num">03</span>
+          <span class="section__num">04</span>
           <span class="section__rule"></span>
           <span class="section__tag">Projects</span>
         </div>
@@ -287,9 +364,11 @@
             <h3 class="project__title">TripSathi</h3>
             <p class="project__desc">
               Planning a multi-day trip across India usually means a dozen browser tabs.
-              TripSathi is a multi-agent AI system that coordinates persona detection,
-              destination research via RAG, constraint-aware scheduling, and iterative
-              refinement — pausing for your feedback rather than spitting out a static itinerary.
+              TripSathi is a multi-agent AI system coordinating persona detection,
+              RAG-based destination research, constraint-aware scheduling, and iterative
+              refinement — it pauses for your input rather than spitting out a static itinerary.
+              The same agentic primitives I shipped at Pega — tool use, human-in-the-loop
+              checkpoints, structured output enforcement — built here from scratch, on my own time.
             </p>
             <div class="project__stack">
               <span class="tag">Python</span>
@@ -306,35 +385,6 @@
           </div>
         </article>
 
-        <!-- Secondary projects grid -->
-        <div class="projects__grid">
-
-          <!-- PLACEHOLDER: Replace with your other projects -->
-          <article class="project project--card reveal">
-            <div class="project__card-inner">
-              <h3 class="project__title">Side Project 2</h3>
-              <p class="project__desc">Short description of what it does and what you learned.</p>
-              <div class="project__stack">
-                <span class="tag">Python</span>
-                <span class="tag">API</span>
-              </div>
-              <a href="https://github.com/anirbanpx" class="project__card-link" target="_blank" rel="noopener">View →</a>
-            </div>
-          </article>
-
-          <article class="project project--card reveal">
-            <div class="project__card-inner">
-              <h3 class="project__title">Side Project 3</h3>
-              <p class="project__desc">Short description of what it does and what you learned.</p>
-              <div class="project__stack">
-                <span class="tag">Next.js</span>
-                <span class="tag">AI</span>
-              </div>
-              <a href="https://github.com/anirbanpx" class="project__card-link" target="_blank" rel="noopener">View →</a>
-            </div>
-          </article>
-
-        </div>
       </div>
     </section>
 

@@ -183,6 +183,14 @@ p { max-width: 60ch; }
   color: var(--clr-white);
 }
 .nav__link--cta:hover { border-color: var(--clr-accent); color: var(--clr-accent); }
+.nav__social {
+  display: flex;
+  align-items: center;
+  color: rgba(255,255,255,0.6);
+  transition: color var(--transition);
+  margin-left: var(--space-4);
+}
+.nav__social:hover { color: var(--clr-accent); }
 
 .nav__burger {
   display: none;

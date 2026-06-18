@@ -484,10 +484,21 @@ p { max-width: 60ch; }
   overflow: hidden;
 }
 .project__media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.project__media-img {
   border-radius: var(--radius-md);
   overflow: hidden;
-  aspect-ratio: 16/10;
   background: #1a1a1a;
+}
+.project__media-img:first-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 16/9;
+}
+.project__media-img:not(:first-child) {
+  aspect-ratio: 4/3;
 }
 .project__screenshot-placeholder {
   width: 100%;
@@ -506,10 +517,12 @@ p { max-width: 60ch; }
     #141414 20px
   );
 }
-.project__media img {
+.project__media-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
+  display: block;
 }
 .project__badge {
   display: inline-block;

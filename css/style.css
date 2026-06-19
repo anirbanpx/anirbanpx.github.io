@@ -936,15 +936,11 @@ p { max-width: 60ch; }
   padding: 0.3em 0.75em;
 }
 
-.footer__email {
-  font-size: var(--fs-lg);
-  color: rgba(255,255,255,0.6);
-  transition: color var(--transition);
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-  padding-bottom: var(--space-2);
-  display: inline-block;
+.footer__cta {
+  align-self: flex-start;
+  font-size: var(--fs-base);
+  padding: 0.875rem 1.75rem;
 }
-.footer__email:hover { color: var(--clr-white); border-color: rgba(255,255,255,0.4); }
 .footer__links { display: flex; gap: var(--space-8); }
 .footer__link {
   font-size: var(--fs-sm);

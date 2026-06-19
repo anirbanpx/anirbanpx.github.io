@@ -158,9 +158,9 @@ p { max-width: 60ch; }
 }
 .nav__logo {
   font-family: var(--ff-display);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-base);
   color: var(--clr-white);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.01em;
 }
 .nav__links {
   display: flex;
@@ -896,14 +896,14 @@ p { max-width: 60ch; }
 ═══════════════════════════════════════════════════════════ */
 .footer {
   background: var(--clr-dark);
-  padding: var(--space-32) var(--space-8);
+  padding: var(--space-16) var(--space-8);
 }
 .footer__inner {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--space-6);
 }
 .footer__heading {
   font-size: clamp(var(--fs-3xl), 6vw, 5rem);
@@ -954,9 +954,9 @@ p { max-width: 60ch; }
 .footer__copy {
   font-size: var(--fs-xs);
   color: rgba(255,255,255,0.2);
-  margin-top: var(--space-8);
+  margin-top: var(--space-4);
   border-top: 1px solid rgba(255,255,255,0.06);
-  padding-top: var(--space-8);
+  padding-top: var(--space-4);
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -983,6 +983,10 @@ p { max-width: 60ch; }
   background-size: 26px 26px;
 }
 /* Dark sections */
+.hero {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
+}
 .experience {
   background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1.5px, transparent 1.5px);
   background-size: 26px 26px;

@@ -796,6 +796,58 @@ p { max-width: 60ch; }
   max-width: 60ch;
 }
 
+/* Compact demoted case studies */
+.work__also {
+  margin-top: var(--space-16);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--clr-border);
+}
+.work__also-heading {
+  font-family: var(--ff-body);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  margin-bottom: var(--space-8);
+}
+.work__also-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+}
+.work__also-title {
+  font-family: var(--ff-display);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  margin-bottom: var(--space-3);
+  color: var(--clr-text);
+}
+.work__also-period {
+  font-family: var(--ff-body);
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  color: var(--clr-muted);
+  margin-left: var(--space-2);
+}
+.work__also-desc {
+  font-size: var(--fs-sm);
+  color: var(--clr-muted);
+  line-height: 1.75;
+  max-width: 52ch;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   OPEN TO ROLES — footer line
+═══════════════════════════════════════════════════════════ */
+.footer__open {
+  margin-top: var(--space-4);
+  font-size: var(--fs-sm);
+  color: rgba(255,255,255,0.45);
+  font-style: italic;
+  max-width: none;
+}
+
 /* ═══════════════════════════════════════════════════════════
    CITATION LINKS
 ═══════════════════════════════════════════════════════════ */
@@ -1202,6 +1254,7 @@ p { max-width: 60ch; }
   .arch__cell:nth-last-child(-n+2) { border-bottom: none; }
 
   .projects__grid { grid-template-columns: 1fr; }
+  .work__also-items { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {

@@ -979,17 +979,17 @@ p { max-width: 60ch; }
 /* ── Dot grid ─────────────────────────────────────────── */
 /* Light sections */
 .about, .work, .projects, .perspectives {
-  background-image: radial-gradient(circle, rgba(0,0,0,0.045) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.055) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
 }
 /* Dark sections */
 .experience {
-  background-image: radial-gradient(circle, rgba(255,255,255,0.038) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
 }
 .footer {
-  background-image: radial-gradient(circle, rgba(255,255,255,0.038) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
 }
 
 /* ── Hero orb (dark section, already has grain) ─────── */

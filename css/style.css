@@ -305,12 +305,12 @@ p { max-width: 60ch; }
   align-self: center;
 }
 .hero__avatar {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
+  width: 380px;
+  height: 380px;
+  border-radius: 12px;
   object-fit: cover;
-  object-position: center 15%;
-  border: 2px solid rgba(255,255,255,0.15);
+  object-position: center 18%;
+  border: 1px solid rgba(255,255,255,0.1);
   display: block;
 }
 
@@ -1284,7 +1284,7 @@ p { max-width: 60ch; }
 
   .hero { flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: var(--space-8); }
   .hero__photo-wrap { align-self: auto; }
-  .hero__avatar { width: 96px; height: 96px; }
+  .hero__avatar { width: 160px; height: 160px; }
   .hero__ctas { flex-direction: column; }
   .hero__ctas .btn { width: 100%; justify-content: center; }
 

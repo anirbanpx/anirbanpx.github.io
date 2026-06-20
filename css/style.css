@@ -295,6 +295,16 @@ p { max-width: 60ch; }
   flex-wrap: wrap;
   transition-delay: 0.3s;
 }
+.hero__avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  border: 2px solid rgba(255,255,255,0.15);
+  margin-bottom: var(--space-6);
+  display: block;
+}
 
 .hero__scroll-hint {
   position: absolute;
